@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body { padding: 25px; font-family: 'Segoe UI', sans-serif; width: 350px; background: #fdfdfd; }
-    h2 { color: #1e1b4b; margin-top: 0; }
+  <meta charset="UTF-8">
+<style>
+    body { padding: 20px; font-family: 'Segoe UI', sans-serif; width: 320px; background: #f9fafb; }
+    h2 { color: #111827; font-size: 18px; margin-bottom: 20px; }
     .field { margin-bottom: 15px; }
-    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #4b5563; }
-    select, input { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; box-sizing: border-box; }
-    button { width: 100%; padding: 12px; background: #4f46e5; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+    label { display: block; font-size: 12px; font-weight: 600; color: #374151; margin-bottom: 5px; }
+    select, input { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; }
+    button { width: 100%; padding: 10px; background: #4f46e5; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 10px; }
     button:hover { background: #4338ca; }
-    #status { margin-top: 10px; color: #059669; font-size: 13px; text-align: center; font-weight: 500; }
+    #status { margin-top: 10px; font-size: 12px; color: #059669; text-align: center; }
   </style>
 </head>
 <body>
-  <h2>AI Settings</h2>
-  
+  <h2>AI Configuration</h2>
   <div class="field">
-    <label>Provider</label>
+    <label>AI Provider</label>
     <select id="provider-select">
-      <option value="groq">Groq (Fastest)</option>
-      <option value="openai">OpenAI (GPT Models)</option>
+      <option value="groq">Groq (Ultra Fast)</option>
+      <option value="openai">OpenAI (GPT-4o/5)</option>
       <option value="gemini">Google Gemini</option>
     </select>
   </div>
-
   <div class="field">
     <label>Model ID</label>
     <input type="text" id="model-id" placeholder="e.g. gpt-4o or gemini-1.5-flash">
   </div>
-
   <div class="field">
     <label>API Key</label>
-    <input type="password" id="api-key" placeholder="Paste your key here">
+    <input type="password" id="api-key" placeholder="Paste your API key">
   </div>
-
-  <button id="save-btn">Save Configuration</button>
+  <button id="save-btn">Save Settings</button>
   <div id="status"></div>
-
-  <p style="font-size: 11px; color: #9ca3af; margin-top: 15px;">
-    Note: Ensure your Model ID matches your Provider's official names.
-  </p>
-
   <script src="options.js"></script>
 </body>
 </html>
